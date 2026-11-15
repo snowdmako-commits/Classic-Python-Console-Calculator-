@@ -19,4 +19,20 @@ def main():
 
             =============================
             """)
-        
+            choice = getText("Choose an option: ")
+
+            if choice is None:
+                continue
+
+            if choice == "7":
+                print("Calculator closed successfully!")
+                break
+
+            operators = {
+                "1": "+",
+                "2": "-",
+                "3": "*",
+                "4": "/",
+                "5": "**",
+                "6": "%"
+            }
