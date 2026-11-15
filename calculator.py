@@ -1,0 +1,7 @@
+def add(a, b):
+    try:
+        return a + b
+
+    except Exception as e:
+        print(f"Addition Error: {e}")
+        return None
