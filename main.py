@@ -1,5 +1,5 @@
 from calculator import calculate
-from utils import getFloat, getText
+from utils import getFloat, getText 
 
 
 def main():
