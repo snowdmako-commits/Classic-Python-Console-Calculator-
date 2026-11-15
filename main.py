@@ -1,5 +1,5 @@
 from calculator import calculate
-from utils import getFloat, getText 
+from utils import getFloat
 
 
 def main():
@@ -19,9 +19,12 @@ def main():
 
             =============================
             """)
-            choice = getText("Choose an option: ")
 
-            if choice is None:
+            try:
+                choice = input("Choose an option: ").strip()
+
+            except Exception as e:
+                print(f"Input Error: {e}")
                 continue
 
             if choice == "7":
@@ -56,7 +59,9 @@ def main():
             result = calculate(num1, operator, num2)
 
             if result is not None:
-                print(f"\nResult: {num1} {operator} {num2} = {result}")
+                print("\n===== RESULT =====")
+                print(f"{num1} {operator} {num2} = {result}")
+
 
     except Exception as e:
         print(f"Main Error: {e}")
@@ -68,4 +73,3 @@ if __name__ == "__main__":
 
     except Exception as e:
         print(f"Program Error: {e}")
-

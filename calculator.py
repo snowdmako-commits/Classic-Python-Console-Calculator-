@@ -6,6 +6,7 @@ def add(a, b):
         print(f"Addition Error: {e}")
         return None
 
+
 def subtract(a, b):
     try:
         return a - b
@@ -14,6 +15,7 @@ def subtract(a, b):
         print(f"Subtraction Error: {e}")
         return None
 
+
 def multiply(a, b):
     try:
         return a * b
@@ -21,6 +23,7 @@ def multiply(a, b):
     except Exception as e:
         print(f"Multiplication Error: {e}")
         return None
+
 
 def divide(a, b):
     try:
@@ -34,6 +37,7 @@ def divide(a, b):
         print(f"Division Error: {e}")
         return None
 
+
 def power(a, b):
     try:
         return a ** b
@@ -42,17 +46,19 @@ def power(a, b):
         print(f"Power Error: {e}")
         return None
 
+
 def mod(a, b):
     try:
         return a % b
 
     except ZeroDivisionError:
-        print("Error: Cannot calculate mod by zero!")
+        print("Error: Cannot calculate modulus by zero!")
         return None
 
     except Exception as e:
-        print(f"Mod Error: {e}")
+        print(f"Modulus Error: {e}")
         return None
+
 
 def calculate(a, operator, b):
     try:
