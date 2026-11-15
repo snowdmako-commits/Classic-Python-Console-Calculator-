@@ -36,3 +36,36 @@ def main():
                 "5": "**",
                 "6": "%"
             }
+
+            if choice not in operators:
+                print("Invalid choice! Please try again.")
+                continue
+
+            num1 = getFloat("Enter first number: ")
+
+            if num1 is None:
+                continue
+
+            num2 = getFloat("Enter second number: ")
+
+            if num2 is None:
+                continue
+
+            operator = operators[choice]
+
+            result = calculate(num1, operator, num2)
+
+            if result is not None:
+                print(f"\nResult: {num1} {operator} {num2} = {result}")
+
+    except Exception as e:
+        print(f"Main Error: {e}")
+
+
+if __name__ == "__main__":
+    try:
+        main()
+
+    except Exception as e:
+        print(f"Program Error: {e}")
+
