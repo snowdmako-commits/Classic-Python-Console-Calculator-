@@ -33,3 +33,11 @@ def divide(a, b):
     except Exception as e:
         print(f"Division Error: {e}")
         return None
+
+def power(a, b):
+    try:
+        return a ** b
+
+    except Exception as e:
+        print(f"Power Error: {e}")
+        return None
