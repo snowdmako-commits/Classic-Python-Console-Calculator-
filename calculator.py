@@ -53,3 +53,34 @@ def mod(a, b):
     except Exception as e:
         print(f"Mod Error: {e}")
         return None
+
+def calculate(a, operator, b):
+    try:
+        if operator == "+":
+            return add(a, b)
+
+        elif operator == "-":
+            return subtract(a, b)
+
+        elif operator == "*":
+            return multiply(a, b)
+
+        elif operator == "/":
+            return divide(a, b)
+
+        elif operator == "**":
+            return power(a, b)
+
+        elif operator == "%":
+            return mod(a, b)
+
+        else:
+            raise ValueError("Invalid operator!")
+
+    except ValueError as e:
+        print(f"Calculation Error: {e}")
+        return None
+
+    except Exception as e:
+        print(f"Unexpected Error: {e}")
+        return None
