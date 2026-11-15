@@ -21,3 +21,15 @@ def multiply(a, b):
     except Exception as e:
         print(f"Multiplication Error: {e}")
         return None
+
+def divide(a, b):
+    try:
+        return a / b
+
+    except ZeroDivisionError:
+        print("Error: Cannot divide by zero!")
+        return None
+
+    except Exception as e:
+        print(f"Division Error: {e}")
+        return None
