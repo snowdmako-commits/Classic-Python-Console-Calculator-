@@ -41,3 +41,15 @@ def power(a, b):
     except Exception as e:
         print(f"Power Error: {e}")
         return None
+
+def mod(a, b):
+    try:
+        return a % b
+
+    except ZeroDivisionError:
+        print("Error: Cannot calculate mod by zero!")
+        return None
+
+    except Exception as e:
+        print(f"Mod Error: {e}")
+        return None
